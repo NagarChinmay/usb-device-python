@@ -1,6 +1,7 @@
 import subprocess
 import csv
 import time
+import serial
 from datetime import datetime
 import os
 
