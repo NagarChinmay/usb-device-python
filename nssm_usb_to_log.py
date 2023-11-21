@@ -59,9 +59,9 @@ def log_usb_devices():
 
 
 class PythonCornerExample(SMWinservice):
-    _svc_name_ = "PythonCornerExample"
-    _svc_display_name_ = "Python Corner's Winservice Example"
-    _svc_description_ = "That's a great winservice! :)"
+    _svc_name_ = '(PBL) Service USB To LOG'
+    _svc_display_name_ = '(PBL) Service USB To LOG'
+    _svc_description_ = 'Service for log all usb device without rfid or with device'
 
     def start(self):
         self.isrunning = True
@@ -71,6 +71,6 @@ class PythonCornerExample(SMWinservice):
 
     def main(self):
         log_usb_devices()
-        
+
 if __name__ == '__main__':
     PythonCornerExample.parse_command_line()
