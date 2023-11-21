@@ -1,4 +1,5 @@
 import socket
+import serial
 
 import win32serviceutil
 
@@ -27,6 +28,7 @@ class SMWinservice(win32serviceutil.ServiceFramework):
         win32serviceutil.ServiceFramework.__init__(self, args)
         self.hWaitStop = win32event.CreateEvent(None, 0, 0, None)
         socket.setdefaulttimeout(60)
+        self.ser = serial.Serial('COM4', 9600)
 
     def SvcStop(self):
         '''
